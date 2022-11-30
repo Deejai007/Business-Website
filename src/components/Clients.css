@@ -1,0 +1,40 @@
+.clients-div {
+  background-color: rgb(245, 245, 245);
+  /* border: 1px solid black; */
+  margin: 18px;
+  /* height: 90vh; */
+  box-shadow: 0 0px 18px 3px rgba(0, 0, 0, 0.345);
+}
+h1 {
+  padding: 12px 24px;
+  font-size: 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.277);
+}
+
+.clients-client {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.437);
+  margin: 8px 48px;
+  display: flex;
+  flex-direction: row;
+}
+.image-div {
+  margin: 12px;
+}
+.image-div img {
+  border-radius: 50%;
+}
+.info-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.name-div {
+  font-size: 18px;
+  margin-left: 12px;
+  margin-top: 48px;
+}
+.email-div {
+  color: rgba(0, 0, 0, 0.575);
+  margin-top: 6px;
+  margin-left: 22px;
+}
