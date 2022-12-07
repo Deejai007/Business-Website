@@ -15,7 +15,7 @@ function LeftNav() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="LeftNavComp hide" id="leftnavbar">
       <nav className="vertical-menu-wrapper">
         {/* <div className="vertical-menu-logo">
           <div>
@@ -28,61 +28,59 @@ function LeftNav() {
               <i className="fa fa-light fa-house-user"> </i> Home
             </Link>
           </li>
-          <ul className="navli">
+          <ul className="navli2">
             <li className="dropdown-btn" onClick={menuToggle}>
               <i className="fa fa-light fa-store"></i> Products
               <i className="fa fa-caret-down"></i>
             </li>
             <ul id="myDropdown" className="dropdown-content show">
               <li>
-                <button
+                {/* <button
                   onClick={() => {
                     navigate("/home/products/electronics");
                   }}
                 >
+                </button> */}
+                <Link className="product-menu" to="/home/products/electronics">
                   &#8226; Electronics
-                </button>
-                {/* <Link className="product-menu" to="/home/products/electronics"> */}
-                {/* </Link> */}
+                </Link>
               </li>
               <li>
-                <button
+                {/* <button
                   onClick={() => {
                     navigate("/home/products/jewelery");
                   }}
                 >
+                </button> */}
+                <Link to="/home/products/jewelery" className="product-menu">
                   &#8226; Jewelery
-                </button>
-                {/* <Link to="/home/products/jewelery" className="product-menu"> */}
-
-                {/* </Link> */}
+                </Link>
               </li>
               <li>
-                <button
+                {/* <button
                   onClick={() => {
                     navigate("/home/products/mensclothing");
                   }}
                 >
+                </button> */}
+                <Link to="/home/products/mensclothing" className="product-menu">
                   &#8226; Men's clothing
-                </button>
-                {/* <Link to="/home/products/mensclothing" className="product-menu"> */}
-                {/* </Link> */}
+                </Link>
               </li>
               <li>
-                <button
+                {/* <button
                   onClick={() => {
                     navigate("/home/products/womensclothing");
                   }}
                 >
-                  &#8226; Women's clothing
-                </button>
+                </button> */}
 
-                {/* <Link */}
-                {/* // to="/home/products/womensclothing" */}
-                {/* // className="product-menu" */}
-                {/* // > */}
-                {/* &#8226; Men's clothing */}
-                {/* </Link> */}
+                <Link
+                  to="/home/products/womensclothing"
+                  className="product-menu"
+                >
+                  &#8226; Women's clothing
+                </Link>
               </li>
             </ul>
           </ul>

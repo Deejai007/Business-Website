@@ -14,7 +14,7 @@ function Clients() {
 
   if (!clients) return <div className="Loading">Loading</div>;
   return (
-    <div className="clients-div">
+    <div className="clients-div ClientsComp ScrollComp">
       <h1>Our clients...</h1>
 
       <div className="clients-list">

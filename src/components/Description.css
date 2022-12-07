@@ -1,10 +1,8 @@
 .item-item {
-  border: 1px solid rgba(0, 0, 0, 0.564);
-  border-radius: 12px;
+  border: 1px solid black;
   width: 500px;
   height: 275px;
   display: flex;
-  background-color: rgb(240, 240, 240);
 }
 
 .image img {

@@ -1,0 +1,189 @@
+.WishlistComp {
+  /* margin: 2%; */
+  background-color: rgb(208, 208, 208);
+  margin: 2% 2% 2% 240px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.items-div {
+  border-radius: 24px;
+
+  margin: 1%;
+  height: 90vh;
+  /* border: 1px solid red; */
+
+  width: 63%;
+  /* margin: 2.5%; */
+}
+.listt {
+  height: 70vh;
+  overflow-y: scroll;
+}
+.summary {
+  /* position: fixed; */
+  /* border: 1px solid red; */
+  background-color: rgb(197, 197, 197);
+  border-radius: 24px;
+
+  margin: 1%;
+  width: 34%;
+}
+
+/* a:-webkit-any-link {
+  color: rgba(0, 0, 0, 0.81);
+  cursor: pointer;
+  text-decoration: none;
+} */
+.basket,
+.container {
+  padding: 0;
+}
+@media screen and (min-width: 992px) {
+  .basket,
+  .container {
+    padding: 0 10px;
+  }
+}
+.action-link,
+.ux-card a,
+.payment > a,
+.terms > a {
+  color: #008a32;
+  font-weight: bold;
+  text-decoration: none;
+}
+.action-link:hover,
+.ux-card a:hover,
+.payment > a:hover,
+.terms > a:hover {
+  color: #008a32;
+}
+.ux-card {
+  /* border: 1px solid #f47373; */
+  border-radius: 12px;
+  width: 80%;
+  margin: 12px auto;
+  background: #ffffff86;
+  padding: 8px;
+  /* position: relative; */
+}
+.ux-card:hover {
+  cursor: pointer;
+  border-color: #008a32;
+  background-color: #fff;
+}
+
+a {
+  color: #333;
+}
+/* a:hover {
+  color: #000;
+} */
+.summary dl {
+  margin: 0;
+  padding: 20px;
+}
+.summary dl dt {
+  float: left;
+  clear: left;
+  font-weight: normal;
+}
+.summary dl dd {
+  float: right;
+  clear: right;
+  font-weight: bold;
+}
+.summary dl:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+@media screen and (min-width: 992px) {
+  .summary .subtotal {
+    border-top: 5px solid #d0d0d0;
+  }
+  .summary .subtotal dt {
+    margin-top: 2px;
+  }
+  .summary .subtotal dd {
+    font-size: 18px;
+  }
+}
+.summary .total {
+  width: 86%;
+  margin: auto;
+  border-radius: 16px;
+  background: #128937;
+  color: rgb(238, 238, 238);
+  padding: 16px;
+}
+.summary .total dt {
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+.summary .total dd {
+  font-size: 1.5em;
+}
+
+.summary button {
+  margin: 0 20px;
+  width: calc(100% - 40px);
+}
+.payment {
+  margin-bottom: 20px;
+}
+.payment > a {
+  float: right;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+.payment h4,
+.payment p {
+  padding: 0 20px;
+}
+.payment button {
+  margin-top: 20px;
+}
+
+.cart button[disabled] {
+  background: #e8e8e8 !important;
+  border-bottom: none !important;
+  color: #848484 !important;
+  opacity: 1;
+}
+.price {
+  position: relative;
+  display: inline-block;
+}
+.price .old {
+  position: absolute;
+  right: 0;
+  opacity: 1;
+}
+.price .new {
+  opacity: 0;
+}
+.price .strike {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  border-top: 1px solid #333;
+}
+.complete button {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.complete button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.39);
+}
+.promocode:hover {
+  cursor: pointer;
+}

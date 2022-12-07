@@ -1,8 +1,9 @@
 import React from "react";
 import Item from "./Item";
 import { useState, useEffect } from "react";
+import "./Product.css";
 import axios from "axios";
-function Product(props) {
+function Product(props, { handleUpdateCart }) {
   // let cat = props.category;
   // console.log(cat);
 
@@ -26,10 +27,15 @@ function Product(props) {
   }, [cate]);
   if (data)
     return (
-      <div>
-        {data.map((item) => (
-          <Item id={item.id} key={item.id} />
-        ))}
+      <div className="ProductComp ScrollComp">
+        <h1>Products in {props.category} category</h1>
+        <div className="productss-div">
+          {data.map((item) => (
+            <div className="prod-prod" key={item.id}>
+              <Item id={item.id} handleUpdateCart={props.handleUpdateCart} />
+            </div>
+          ))}
+        </div>
       </div>
     );
 }

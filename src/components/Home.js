@@ -2,7 +2,7 @@
 // import { CCarousel } from "@coreui/react";
 
 function Home() {
-  return <div>Home asdj;</div>;
+  return <div className="HomeComp ScrollComp">Home asdj;</div>;
 }
 
 export default Home;

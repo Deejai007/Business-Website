@@ -1,4 +1,23 @@
+body {
+  margin: 0;
+  /* background: #181824; */
+  font-family: Arial;
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  list-style-type: none;
+}
 .App {
   display: flex;
   flex-direction: row;
+}
+.ScrollComp {
+  margin-left: 240px;
+}
+.hide {
+  position: absolute;
+  left: -1223px;
 }
