@@ -9,7 +9,7 @@ function Login(props) {
   const navigate = useNavigate();
 
   const navigateToHome = () => {
-    document.getElementById("leftnavbar").classList.remove("hide");
+    // document.getElementById("leftnavbar").classList.remove("hide");
     navigate("/home", { state: { username: obj.userName, loggedin: true } });
     console.log(obj);
   };

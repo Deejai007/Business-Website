@@ -1,15 +1,13 @@
-import Login from "./components/Login";
-import MainPage from "./components/MainPage";
+import Login from "./components/Login/Login";
 import React, { useState } from "react";
-import Wishlist from "./components/Wishlist";
-import Home from "./components/Home";
+import Wishlist from "./components/Wishlist/Wishlist";
+import Home from "./components/Home/Home";
 import { useNavigate, useLocation } from "react-router-dom";
-import LeftNav from "./components/LeftNav";
-import TopNav from "./components/TopNav";
-import Product from "./components/Product";
-import About from "./components/About";
-import Clients from "./components/Clients";
-import Description from "./components/Description";
+import LeftNav from "./components/Navbar/LeftNav";
+import Product from "./components/Products/Product";
+import About from "./components/Aboutus/About";
+import Clients from "./components/Clients/Clients";
+import Description from "./components/Login/Description";
 import "./App.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,8 +23,8 @@ function App() {
   //   toast(`👋 Hello ${namee}!`);
   // };
   const [setNav, setSetNav] = useState(false);
-
   const [wishlist, setWishlist] = useState([]);
+  // document.getElementById("leftnavbar").classList.remove("hide");
   const handleUpdateCart = (id) => {
     let present = wishlist.includes(id);
     if (!present) {
@@ -36,8 +34,10 @@ function App() {
       // console.log("Already present");
       toast("Already present in cart");
     }
+
     // console.log(wishlist);
   };
+
   return (
     <BrowserRouter>
       <div className="App">

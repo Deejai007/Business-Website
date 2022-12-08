@@ -5,6 +5,7 @@ import {
   Route,
   Link,
   useNavigate,
+  useLocation,
 } from "react-router-dom";
 
 import "./LeftNav.css";
@@ -13,9 +14,13 @@ function LeftNav() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   const navigate = useNavigate();
-
+  const location = useLocation();
+  if (location.pathname == "/") {
+    return null;
+  }
+  // console.log(location);
   return (
-    <div className="LeftNavComp hide" id="leftnavbar">
+    <div className="LeftNavComp " id="leftnavbar">
       <nav className="vertical-menu-wrapper">
         {/* <div className="vertical-menu-logo">
           <div>

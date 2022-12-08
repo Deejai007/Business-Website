@@ -12,7 +12,7 @@ function Clients() {
   }, []);
   //   let clients_info = clients.data;
 
-  if (!clients) return <div className="Loading">Loading</div>;
+  if (!clients) return <div className="dj-Loading">Loading</div>;
   return (
     <div className="clients-div ClientsComp ScrollComp">
       <h1>Our clients...</h1>

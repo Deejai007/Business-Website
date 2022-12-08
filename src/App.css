@@ -16,6 +16,7 @@ body {
 }
 .ScrollComp {
   margin-left: 240px;
+  width: 100%;
 }
 .hide {
   position: absolute;
