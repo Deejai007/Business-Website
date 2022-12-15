@@ -21,22 +21,29 @@ function Product(props, { handleUpdateCart }) {
     }
   };
   useEffect(() => {
-    // if(props.ca)
-    // if (props.category !== cate) setCate(props.category);s
     getItems();
   }, [cate]);
-  if (data)
+  if (!data)
     return (
       <div className="ProductComp ScrollComp">
         <h1>Products in {props.category} category</h1>
         <div className="productss-div">
-          {data.map((item) => (
-            <div className="prod-prod" key={item.id}>
-              <Item id={item.id} handleUpdateCart={props.handleUpdateCart} />
-            </div>
-          ))}
+          <div className="dj-Loading"></div>
         </div>
       </div>
     );
+  return (
+    <div className="ProductComp ScrollComp">
+      <h1>Products in {props.category} category</h1>
+      <div className="productss-div">
+        {/* <div className="dj-Loading"></div> */}
+        {data.map((item) => (
+          <div className="prod-prod" key={item.id}>
+            <Item id={item.id} handleUpdateCart={props.handleUpdateCart} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 export default Product;

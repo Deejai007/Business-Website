@@ -41,7 +41,7 @@ function Item(props, { handleUpdateCart }) {
               <button
                 onClick={() => {
                   console.log("Child called handleClick");
-                  props.handleUpdateCart(product.id);
+                  props.handleUpdateCart(product.id, 1);
                 }}
                 className="action-btn addtocart-btn"
               >

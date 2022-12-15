@@ -22,22 +22,25 @@ function App() {
   // const notify = () => {
   //   toast(`👋 Hello ${namee}!`);
   // };
+
   const [setNav, setSetNav] = useState(false);
   const [wishlist, setWishlist] = useState([]);
-  // document.getElementById("leftnavbar").classList.remove("hide");
-  const handleUpdateCart = (id) => {
-    let present = wishlist.includes(id);
-    if (!present) {
-      setWishlist((wishlist) => [...wishlist, id]);
-      toast("Item added tocart");
-    } else {
-      // console.log("Already present");
-      toast("Already present in cart");
+  const handleUpdateCart = (id, mode) => {
+    if (mode == 1) {
+      let present = wishlist.includes(id);
+      if (!present) {
+        setWishlist((wishlist) => [...wishlist, id]);
+        toast("Item added to Cart!");
+      } else {
+        // console.log("Already present");
+        toast("Already present in Cart!");
+      }
+    } else if (mode == 0) {
+      let listAfterRemove = wishlist.filter((item) => item !== id);
+      setWishlist(listAfterRemove);
+      toast("Item removed from Cart!");
     }
-
-    // console.log(wishlist);
   };
-
   return (
     <BrowserRouter>
       <div className="App">
@@ -63,7 +66,12 @@ function App() {
             element={<Home />}
             handleUpdateCart={handleUpdateCart}
           />
-          <Route path="home/wishlist" element={<Wishlist list={wishlist} />} />
+          <Route
+            path="home/wishlist"
+            element={
+              <Wishlist list={wishlist} handleUpdateCart={handleUpdateCart} />
+            }
+          />
           <Route path="home/about" element={<About />} />
           <Route path="home/clients" element={<Clients />} />
           <Route
@@ -75,6 +83,7 @@ function App() {
               />
             }
           />
+
           <Route
             path="home/products/mensclothing"
             element={

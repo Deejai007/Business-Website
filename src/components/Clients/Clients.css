@@ -43,6 +43,29 @@ h1 {
   margin-left: 22px;
 }
 .dj-Loading {
-  margin: 48px 20px 46px 250px;
-  font-size: 48px;
+  /* margin: 48px 20px 46px 250px; */
+  /* margin: auto; */
+  position: absolute;
+  left: 50vw;
+  top: 30vh;
+  /* font-size: 48px; */
+  width: 120px;
+  height: 120px;
+  background-color: rgb(237, 237, 237);
+  border: 5px solid rgb(184, 184, 184);
+  border-left: 1px solid black;
+  border-top: 4px solid black;
+  border-right: 6px solid black;
+  /* outline: 12px solid red; */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
